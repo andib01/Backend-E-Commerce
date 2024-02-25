@@ -2,7 +2,7 @@ import express, { Express } from 'express';
 import config from '../config.json' assert { type: 'json' };
 import mongoose from 'mongoose';
 
-const port = 8080;
+const port = process.env.SERVER_PORT || 8080;
 const mongoAuth = `${config.db.connect.user}:${config.db.connect.password}`;
 const mongoDBUrl = `${mongoAuth}@${config.db.connect.host}:${config.db.connect.port.mongodb}/`;
 
