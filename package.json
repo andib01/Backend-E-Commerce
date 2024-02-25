@@ -1,0 +1,14 @@
+{
+  "name": "backend-e-commerce",
+  "version": "1.0.0",
+  "description": "This project is designed to create a E-Commerce system with the main focus being on the backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
