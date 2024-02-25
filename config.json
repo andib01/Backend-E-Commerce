@@ -3,7 +3,7 @@
         "use": "mongodb",
         "connect": {
             "user": "username",
-            "host": "localhost",
+            "host": "127.0.0.1",
             "database": "example",
             "password": "password",
             "port": {

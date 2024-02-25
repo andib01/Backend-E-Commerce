@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 const port = 8080;
 const mongoAuth = `${config.db.connect.user}:${config.db.connect.password}`;
-const mongoDBUrl = `${mongoAuth}@${config.db.connect.host}:${config.db.connect.port.mongodb}/${config.db.connect.database}`;
+const mongoDBUrl = `${mongoAuth}@${config.db.connect.host}:${config.db.connect.port.mongodb}/`;
 
 function configureApp(app: Express) {
   app.use(express.json());
