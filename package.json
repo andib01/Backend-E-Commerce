@@ -4,6 +4,10 @@
   "description": "This project is designed to create a E-Commerce system with the main focus being on the backend.",
   "main": "index.js",
   "scripts": {
+    "copy-static-assets": "node --loader ts-node/esm copy-static-assets.ts",
+    "build": "tsc && npm run copy-static-assets",
+    "create-tables": "node --loader ts-node/esm db/create-tables.ts",
+    "start": "nodemon --watch 'src/**' --ext 'ts,json' --exec node --no-warnings --loader ts-node/esm src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
