@@ -2,6 +2,7 @@
   "name": "backend-e-commerce",
   "version": "1.0.0",
   "description": "This project is designed to create a E-Commerce system with the main focus being on the backend.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "copy-static-assets": "node --loader ts-node/esm copy-static-assets.ts",
@@ -16,11 +17,13 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/shelljs": "^0.8.15",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.33.2",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "shelljs": "^0.8.5",
     "ts-node": "^10.9.2"
