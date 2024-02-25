@@ -1,3 +1,14 @@
 {
-
+    "db": {
+        "use": "mongodb",
+        "connect": {
+            "user": "username",
+            "host": "localhost",
+            "database": "example",
+            "password": "password",
+            "port": {
+                "mongodb": 27017
+            }
+        }
+    }
 }
