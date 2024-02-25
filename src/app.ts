@@ -1,10 +1,7 @@
 import express, { Express } from 'express';
-import config from '../config.json' assert { type: 'json' };
-import mongoose from 'mongoose';
+import { startDB } from './db.js';
 
 const port = process.env.SERVER_PORT || 8080;
-const mongoAuth = `${config.db.connect.user}:${config.db.connect.password}`;
-const mongoDBUrl = `${mongoAuth}@${config.db.connect.host}:${config.db.connect.port.mongodb}/`;
 
 function configureApp(app: Express) {
   app.use(express.json());
@@ -14,7 +11,7 @@ function start() {
   const app = express();
   configureApp(app);
   startHttpServer(app);
-  mongoose.connect(`${config.db.use}://${mongoDBUrl}`);
+  startDB();
 }
 
 function startHttpServer(app: Express) {
