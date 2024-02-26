@@ -14,6 +14,7 @@ const ProductSchema: Schema = new Schema({
   description: { type: String, default: 'This product has no description' },
   price: { type: String, required: true },
   category: { type: String, required: true }
+  //More fields to be added here later
 });
 
-const Product = mongoose.model<Product>('Product', ProductSchema);
+export const Product = mongoose.model<Product>('Product', ProductSchema);
