@@ -1,6 +1,7 @@
 import express, { Express } from 'express';
 import { startDB } from './db.js';
-
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env' });
 const port = process.env.SERVER_PORT || 8080;
 
 function configureApp(app: Express) {
