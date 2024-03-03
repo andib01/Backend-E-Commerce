@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import { startDB } from './db.js';
-import productRoutes from './routes/productRoutes';
+import productRoutes from './routes/productRoutes.js';
 import dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
 const port = process.env.SERVER_PORT || 8080;
