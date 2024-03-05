@@ -1,6 +1,6 @@
 import { Product } from '../models/product';
-import mongoose from 'mongoose';
 
-function addProduct(params: Product) {
-  //TODO #3
+async function addProduct(productData: Product): Promise<Product> {
+  const product = productData;
+  return product.save();
 }
