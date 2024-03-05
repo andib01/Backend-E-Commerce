@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Decimal128 } from 'mongodb';
 import mongoose, { Schema, Document, model, SchemaTypes } from 'mongoose';
 
