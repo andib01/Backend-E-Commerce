@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Decimal128 } from 'mongodb';
-import mongoose, { Schema, Document, model, SchemaTypes } from 'mongoose';
+import { Schema, Document, model, SchemaTypes } from 'mongoose';
 
 export interface Product extends Document {
   name: string;
@@ -19,7 +17,7 @@ const ProductSchema: Schema = new Schema({
     required: true,
     validate: {
       validator: (v: Decimal128) => parseFloat(v.toString()) >= 0,
-      message: (props: any) => `${props.value} is a negative number`
+      message: (props: { value: number }) => `${props.value} is a negative number`
     }
   },
   category: { type: SchemaTypes.ObjectId, required: true, ref: 'Category' }
