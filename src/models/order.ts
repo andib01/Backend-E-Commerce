@@ -1,5 +1,5 @@
 import { Decimal128 } from 'mongodb';
-import mongoose, { Schema, Document, model, SchemaTypes } from 'mongoose';
+import { Schema, Document, model, SchemaTypes } from 'mongoose';
 import { Product } from './product';
 import { user } from './user';
 
@@ -18,7 +18,7 @@ const OrderSchema: Schema = new Schema({
     required: true,
     validate: {
       validator: (v: Decimal128) => parseFloat(v.toString()) >= 0,
-      message: (props: any) => `${props.value} is a negative number`
+      message: (props: { value: number }) => `${props.value} is a negative number`
     }
   }
   //More fields to be added here later
