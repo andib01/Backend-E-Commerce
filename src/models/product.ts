@@ -1,7 +1,7 @@
 import { Decimal128 } from 'mongodb';
 import { Schema, Document, model, SchemaTypes } from 'mongoose';
 
-export interface Product extends Document {
+export interface IProduct extends Document {
   name: string;
   description?: string;
   price: Decimal128;
@@ -23,5 +23,5 @@ const ProductSchema: Schema = new Schema({
   category: { type: SchemaTypes.ObjectId, required: true, ref: 'Category' }
   //More fields to be added here later
 });
-const Product = model<Product>('Product', ProductSchema);
+const Product = model<IProduct>('Product', ProductSchema);
 export default Product;

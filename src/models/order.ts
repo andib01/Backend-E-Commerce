@@ -1,12 +1,12 @@
 import { Decimal128 } from 'mongodb';
 import { Schema, Document, model, SchemaTypes } from 'mongoose';
-import { Product } from './product';
-import { user } from './user';
+import { IProduct } from './product';
+import { IUser } from './user';
 
-export interface Order extends Document {
-  products: Product[];
+export interface IOrder extends Document {
+  products: IProduct[];
   total: Decimal128;
-  user: user;
+  user: IUser;
   //More fields to be added here later
 }
 
@@ -23,5 +23,5 @@ const OrderSchema: Schema = new Schema({
   }
   //More fields to be added here later
 });
-const Order = model<Product>('Product', OrderSchema);
-export default Product;
+const Order = model<IOrder>('Product', OrderSchema);
+export default Order;

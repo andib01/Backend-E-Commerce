@@ -1,6 +1,6 @@
-import { Category } from '../models/category';
+import { ICategory } from '../models/category';
 
-export async function addCategory(productData: Category): Promise<Category> {
+export async function addCategory(productData: ICategory): Promise<ICategory> {
   const product = productData;
   return product.save();
 }
