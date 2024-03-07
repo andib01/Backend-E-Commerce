@@ -14,9 +14,8 @@ export async function findProduct(productId: ObjectId): Promise<IProduct | null>
   }
 }
 export async function deleteProduct(productId: ObjectId): Promise<boolean> {
-  const product = await findProduct(productId);
+  const product: IProduct | null = await Product.findByIdAndDelete(productId);
   if (product) {
-    product.deleteOne;
     return true;
   } else {
     return false;
